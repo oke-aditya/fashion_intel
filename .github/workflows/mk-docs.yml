@@ -24,4 +24,5 @@ jobs:
       - name: Build the docs
         run:  |
           cd docs
-          mkdocs build  
+          mkdocs build
+          mkdocs gh-deploy  
