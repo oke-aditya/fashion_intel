@@ -12,3 +12,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 ## Project layout
 * Hello
 * Push 2
+* Check docs
