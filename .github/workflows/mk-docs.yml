@@ -25,4 +25,4 @@ jobs:
         run:  |
           cd docs
           mkdocs build
-          mkdocs gh-deploy  
+          mkdocs gh-deploy --force  
