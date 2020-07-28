@@ -1,6 +1,3 @@
-import torch
-
-
 def test_torch():
-    print(torch.__version__)
+    print("Hello World")
     return 1
