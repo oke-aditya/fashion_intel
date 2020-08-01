@@ -4,11 +4,10 @@ import cv2
 import torch
 from torch.utils.data import DataLoader, Dataset
 class detection_dataset(Dataset):
-    def __init__(self, dataframe, image_dir, target, transforms=None, train=True):
+    def __init__(self, dataframe, target, transforms=None, train=True):
         super().__init__()
 
         self.image_ids = dataframe['image_id'].unique()
-        self.image_dir = image_dir
         self.transforms = transforms
         self.df = dataframe
         self.train = train
@@ -19,8 +18,7 @@ class detection_dataset(Dataset):
 
     def __getitem__(self, index):
         image_id = self.image_ids[index]
-        image_src = image_dir
-        image = cv2.imread(image_src, cv2.IMREAD_COLOR)
+        image = cv2.imread(image_id, cv2.IMREAD_COLOR)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB).astype(np.float32)
         
         # Scale down the pixel values of image
