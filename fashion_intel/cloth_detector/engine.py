@@ -8,6 +8,8 @@ import numpy as np
 import time
 from tqdm import tqdm
 
+__all__ = ["train_fn", "eval_fn"]
+
 
 def train_fn(train_dataloader, detector, optimizer, device, scheduler=None):
     detector.train()
