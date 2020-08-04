@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 def train_fn(train_dataloader, detector, optimizer, device, scheduler=None):
     detector.train()
-    for images, targets, image_ids in tqdm(train_dataloader):
+    for images, targets in tqdm(train_dataloader):
         images = list(image.to(device) for image in images)
         # it's key:value for t in targets.items
         # This is the format the fasterrcnn expects for targets
@@ -35,7 +35,7 @@ def eval_fn(val_dataloader, detector, device, detection_threshold=0.45):
     results = []
     detector.eval()
     with torch.no_grad():
-        for images, targets, image_ids in tqdm(val_dataloader):
+        for images, targets in tqdm(val_dataloader):
             images = list(image.to(device) for image in images)
 
             model_time = time.time()
@@ -57,9 +57,9 @@ def eval_fn(val_dataloader, detector, device, detection_threshold=0.45):
                 # select only those boxes whose score is greater
                 # scores = scores[scores >= detection_threshold]
                 # labels = labels[scores >= detection_threshold]
-                image_id = image_ids[i]
+                # image_id = image_ids[i]
                 result = {  # Store the image id and boxes and scores in result dict.
-                    "image_id": image_id,
+                    # "image_id": image_id,
                     "boxes": boxes,
                     "scores": scores,
                     "labels": labels,

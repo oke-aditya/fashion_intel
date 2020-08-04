@@ -2,8 +2,8 @@
 # Edit the configuration file as per your needs
 
 
-TRAIN_CSV_PATH = 'final_data.csv'
-VALIDATION_CSV_PATH = 'df_val.csv'
+TRAIN_CSV_PATH = "final_data.csv"
+VALIDATION_CSV_PATH = "df_val.csv"
 TARGET_COL = "final_target"
 TRAIN_BATCH_SIZE = 2
 VALID_BATCH_SIZE = 2
