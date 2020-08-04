@@ -7,9 +7,9 @@ import datetime
 import pickle
 import time
 
-import torch
+import matplotlib.pyplot as plt
 
-# import torch.distributed as dist
+import torch.distributed as dist
 
 import errno
 import os
