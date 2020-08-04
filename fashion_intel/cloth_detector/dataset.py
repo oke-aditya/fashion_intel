@@ -25,7 +25,7 @@ class detection_dataset(Dataset):
         xbr = self.df["xbr"][index]
         ytl = self.df["ytl"][index]
         ybr = self.df["ybr"][index]
-        label = self.df["target"][index]
+        label = self.df[self.target][index]
 
         image = Image.open(img_path)
         if self.transforms is not None:  # Apply transformation
@@ -38,7 +38,7 @@ class detection_dataset(Dataset):
         area = torch.as_tensor(area, dtype=torch.float32)
 
         # For has_mask
-        labels = torch.as_tensor(label, dtype=torch.int64)
+        labels = torch.as_tensor([label], dtype=torch.int64)
         # print(labels)
 
         target = {}
