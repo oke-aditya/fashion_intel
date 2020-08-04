@@ -7,6 +7,8 @@ from torchvision.models.detection import FasterRCNN
 
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
+__all__ = ["create_model"]
+
 
 def create_model(num_classes, min_size=100, max_size=900, backbone="mobile_net"):
     # note num_classes = total_classes + 1 for background.
