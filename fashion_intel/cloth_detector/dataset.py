@@ -31,14 +31,14 @@ class detection_dataset(Dataset):
         if self.transforms is not None:  # Apply transformation
             image = self.transforms(image)
 
-        boxes = [xtl, ytl, xbr, ybr]
+        boxes = [[xtl, ytl, xbr, ybr]]
         boxes = torch.as_tensor(boxes, dtype=torch.float32)
 
         area = (boxes[:, 3] - boxes[:, 1]) * (boxes[:, 2] - boxes[:, 0])
         area = torch.as_tensor(area, dtype=torch.float32)
 
         # For has_mask
-        labels = torch.as_tensor([label], dtype=torch.int64)
+        labels = torch.as_tensor(label, dtype=torch.int64)
         # print(labels)
 
         target = {}
