@@ -20,7 +20,6 @@ def run():
 
     train_dataset = dataset.detection_dataset(
         train_df,
-        config.IMAGE_DIR,
         target=config.TARGET_COL,
         train=True,
         transforms=T.Compose([T.ToTensor()]),
@@ -28,7 +27,6 @@ def run():
 
     valid_dataset = dataset.detection_dataset(
         valid_df,
-        config.IMAGE_DIR,
         target=config.TARGET_COL,
         train=True,
         transforms=T.Compose([T.ToTensor()]),

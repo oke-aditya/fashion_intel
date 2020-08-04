@@ -8,7 +8,7 @@ from torchvision.models.detection import FasterRCNN
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
 
-def create_model(num_classes, min_size=300, max_size=500, backbone="mobile_net"):
+def create_model(num_classes, min_size=100, max_size=900, backbone="mobile_net"):
     # note num_classes = total_classes + 1 for background.
 
     # Adding multiple backbones We don't need the built in Fasterrcnn
@@ -96,12 +96,8 @@ def create_model(num_classes, min_size=300, max_size=500, backbone="mobile_net")
     ft_mean = [0.485, 0.456, 0.406]
     ft_std = [0.229, 0.224, 0.225]
 
-    ft_anchor_generator = AnchorGenerator(
-        sizes=((32, 64, 128)), aspect_ratios=((0.5, 1.0, 2.0))
-    )
-    ft_roi_pooler = torchvision.ops.MultiScaleRoIAlign(
-        featmap_names=[0], output_size=7, sampling_ratio=2
-    )
+    # ft_anchor_generator = AnchorGenerator(sizes=((32, 64, 128)), aspect_ratios=((0.5, 1.0, 2.0)))
+    # ft_roi_pooler = torchvision.ops.MultiScaleRoIAlign(featmap_names=[0], output_size=7, sampling_ratio=2)
 
     ft_model = FasterRCNN(
         backbone=ft_backbone,
