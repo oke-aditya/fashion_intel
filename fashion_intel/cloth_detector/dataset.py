@@ -38,7 +38,7 @@ class detection_dataset(Dataset):
         area = torch.as_tensor(area, dtype=torch.float32)
 
         # For has_mask
-        labels = torch.as_tensor(label, dtype=torch.int64)
+        labels = torch.as_tensor([label], dtype=torch.int64)
         # print(labels)
 
         target = {}
