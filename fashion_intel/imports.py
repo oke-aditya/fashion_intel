@@ -15,7 +15,7 @@ from sklearn.preprocessing import MinMaxScaler
 # Typing
 from typing import List
 
-# Torch 
+# Torch
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

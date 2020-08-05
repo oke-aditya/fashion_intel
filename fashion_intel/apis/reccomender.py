@@ -1,9 +1,11 @@
 from fashion_intel.imports import *
 
+
 class FAISS:
     """
     This class contains functions related to product reccomendation
     """
+
     def __init__(self):
         pass
 

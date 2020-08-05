@@ -1,5 +1,6 @@
 from fashion_intel.imports import *
 
+
 class Feed:
     """
     This class contains functions to support the fashion feed
@@ -20,4 +21,3 @@ class Feed:
         """
 
         pass
-
