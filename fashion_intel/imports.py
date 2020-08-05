@@ -6,6 +6,9 @@ from ast import literal_eval
 from tqdm.notebook import tqdm as tqdm_notebook
 from tqdm import tqdm
 
+# Graph libraries
+import networkx as nx
+
 # Machine learning libraries
 import numpy as np
 import pandas as pd
