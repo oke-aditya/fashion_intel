@@ -1,5 +1,6 @@
 from fashion_intel.imports import *
 
+
 class Tagger:
     """ 
     A class to provide image tagging 
@@ -16,4 +17,3 @@ class Tagger:
             str: the generated description of image
         """
         pass
-

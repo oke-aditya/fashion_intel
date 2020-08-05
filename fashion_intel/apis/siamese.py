@@ -1,5 +1,6 @@
 from fashion_intel.imports import *
 
+
 class Fashion2Vec:
     """ 
     A class to provide fashion image embeddings
@@ -16,4 +17,3 @@ class Fashion2Vec:
             None
         """
         pass
-
