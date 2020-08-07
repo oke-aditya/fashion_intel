@@ -263,3 +263,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Data
+data/features
+data/tables/
+data/utils/
+
+# Models
+
