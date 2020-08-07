@@ -1,4 +1,5 @@
 from fashion_intel.imports import *
+import config
 
 __all__ = ["Feed"]
 
@@ -35,7 +36,7 @@ class Feed:
 
 if __name__ == "__main__":
 
-    df_path = "./data/tables/scores.csv"
+    df_path = config.scores_path
     df = pd.read_csv(df_path)
 
     feed = Feed(df)
