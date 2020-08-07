@@ -4,6 +4,9 @@ import cv2
 from PIL import Image
 import torch
 from torch.utils.data import DataLoader, Dataset
+from PIL import ImageFile
+
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 
 class detection_dataset(Dataset):
@@ -27,7 +30,11 @@ class detection_dataset(Dataset):
         ybr = self.df["ybr"][index]
         label = self.df[self.target][index]
 
-        image = Image.open(img_path)
+        if os.path.exists(img_path):
+            image = Image.open(img_path)
+        else:
+            print("File not found")
+            image = Image.open("img/MEN/Denim/id_00000080/01_1_front.jpg")
         if self.transforms is not None:  # Apply transformation
             image = self.transforms(image)
 
