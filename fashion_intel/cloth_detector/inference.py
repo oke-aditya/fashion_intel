@@ -1,6 +1,7 @@
 # This script does only inference from the loaded model
 import cv2
-import matplotlib.pyplot as plt
+
+# import matplotlib.pyplot as plt
 import torch
 import model
 import os
