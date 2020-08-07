@@ -12,3 +12,16 @@ OUTPUT_PATH = "outputs/"
 PREDICT_IMAGE = None
 SAVE_IMAGE = None
 SAVE_DIR = "outputs/"
+
+
+# Configuration for feed api
+scores_path = "./data/tables/scores.csv"
+
+# Configuration for reccomender api
+ids_path = "./data/tables/smol.csv"
+features_dir = "./data/features"
+
+# Configuration for tagger api
+state_path = "./models/tagger.pt"
+vec_dir = "./data/features"
+util_dir = "./data/utils"

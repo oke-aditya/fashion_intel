@@ -1,5 +1,6 @@
 from fashion_intel.imports import *
 from fashion_intel.tagger import *
+import config
 
 __all__ = ["FashionTagger"]
 
@@ -73,11 +74,11 @@ class FashionTagger:
 
 if __name__ == "__main__":
 
-    state_path = "./models/tagger.pt"
+    state_path = config.state_path
     state_dict = torch.load(state_path)
 
-    vec_dir = "./data/features"
-    util_dir = "./data/utils"
+    vec_dir = config.vec_dir
+    util_dir = config.util_dir
 
     fashion_tagger = FashionTagger(state_dict, vec_dir, util_dir)
 

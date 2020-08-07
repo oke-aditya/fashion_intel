@@ -1,5 +1,5 @@
 from fashion_intel.imports import *
-
+import config
 
 __all__ = ["FAISS"]
 
@@ -67,11 +67,12 @@ if __name__ == "__main__":
     _ids = _ids[:100]
 
     # Test model
-    features_dir = "./data/features"
+    features_dir = config.features_dir
     engine = FAISS(_ids, features_dir)
 
     engine.load_vectors()
 
     engine.build_index()
 
+    # Top 5 similar
     D, I = engine.get_similar(1, 5)
