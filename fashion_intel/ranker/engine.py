@@ -1,6 +1,6 @@
 from fashion_intel.imports import *
 
-__all__ = ["Ranker","BayesianRanker"]
+__all__ = ["Ranker", "BayesianRanker"]
 
 
 class Ranker:
@@ -63,22 +63,26 @@ class BayesianRanker:
     This class ranks fashion from e-commerce sites using ratings
     """
 
-    def __init__(self,df, scale):
+    def __init__(self, df, scale):
         self.df = df
         self.scale = scale
 
     def load_variables(self):
-        self.mean_rating = self.df['rating'].mean()
-        self.min_review = self.df['reviews  '].min()
-    
+        self.mean_rating = self.df["rating"].mean()
+        self.min_review = self.df["reviews  "].min()
+
     def true_rating(self, rating, review, scale):
-        t_rating = (self.mean_rating*self.min_reviews + rating*reviews)/(self.min_reviews+reviews)
-        t_rating = t_rating/self.scale
+        t_rating = (self.mean_rating * self.min_reviews + rating * reviews) / (
+            self.min_reviews + reviews
+        )
+        t_rating = t_rating / self.scale
         return t_rating
-            
 
     def rank_products(self):
-        self.df['true_rating'] = self.df.apply(lambda row: self.true_rating(row['rating'],row['reviews'], self.scale), axis=1)
+        self.df["true_rating"] = self.df.apply(
+            lambda row: self.true_rating(row["rating"], row["reviews"], self.scale),
+            axis=1,
+        )
         return self.df
 
 
@@ -106,22 +110,20 @@ if __name__ == "__main__":
 
     scores = ranker.normalize_score()
 
-
     # _indices = [_score[1] for _score in scores]
     # _scores = [_score[0] for _score in scores]
 
     # df = pd.DataFrame({'id':_indices,'score':_scores})
     # df.to_csv('./data/tables/scores.csv', index=None)
 
-
     # Bayesian ranker test
-    amazon_df_path = './data/tables/amazon-tshirt.csv'
-    
+    amazon_df_path = "./data/tables/amazon-tshirt.csv"
+
     b_df = pd.read_csv(amazon_df_path)
 
-    bayesian_ranker = BayesianRanker(b_df,scale=5)
+    bayesian_ranker = BayesianRanker(b_df, scale=5)
 
     bayesian_ranker.load_variables()
-    modified_df= bayesian_ranker.rank_products()
+    modified_df = bayesian_ranker.rank_products()
 
     print(modified_df.head())
