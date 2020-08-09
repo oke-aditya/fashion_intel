@@ -1,15 +1,24 @@
 # Fashion Intel
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is the documentation for our solution to Flipkart Grid 2.0 
 
-## Commands
+This documentation contains the explanation of the components used and demos
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+The trained model weights are hosted on GCP. Run the download_models.sh to use them
 
-## Project layout
-* Hello
-* Push 2
-* Check docs
+### Project Layout
+
+- fashion_intel
+    - apis: All the APIs for ML models used by the application
+    - cloth_detector: Training and inference codes for the cloth detector
+    - fashion2vec: Training and inference codes fashion2vec 
+    - pytorch_cnn_trainer: The CNN trainer we built to train our models (Tagger, Fashion2Vec)
+    - ranker: The ranking algorithms code
+    - tagger: Training and inference codes for fashion tagger
+
+- react_app
+    - The code files for our frontend application
+
+- scraper_scripts
+    - The webscrapper scripts
+
