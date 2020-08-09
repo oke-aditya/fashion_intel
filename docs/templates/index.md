@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Fashion Intel
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
