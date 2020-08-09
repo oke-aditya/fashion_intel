@@ -7,8 +7,7 @@ Fashion2Vec is essentially a CNN (in our case ResNet) which is trained using sup
 this allows the CNN to generate very accurate feature representations of the fashion Images
 
 
-<img src="images/fashion2vec1.png" alt="Fashion2Vec">
-
+![Fashion2Vec](images/fashion2vec1.png)
 
 ## Dataset
 
