@@ -15,6 +15,8 @@ We developed a graph based ranking algorithm to get a score for each fashion ima
 
 This algorithm can identify communities of nodes in a graph based on the edges connecting them.
 
+<img src="images/ranking.png" alt="Ranking">
+
 ### How it works
 
 - The Fashion2Vec vectors of each fashion image is used to build a fully connected graph
