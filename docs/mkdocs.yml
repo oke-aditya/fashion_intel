@@ -23,3 +23,7 @@ extra_javascript:
 
 nav:
   - Home: index.md
+  - Fashion2Vec: fashion2vec.md
+  - Fashion Ranking: ranking.md
+  - Fashion Tagging: tagging.md
+  - Fashion Search Engine: visualsearch.md
