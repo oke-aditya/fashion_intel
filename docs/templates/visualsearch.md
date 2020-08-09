@@ -1,4 +1,4 @@
-# Visual Search Engine
+# Fashion Search Engine
 
 ## Overview
 
