@@ -110,7 +110,6 @@ if __name__ == "__main__":
 
     scores = ranker.normalize_score()
 
-
     # _indices = [_score[1] for _score in scores]
     # _scores = [_score[0] for _score in scores]
 

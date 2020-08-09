@@ -1,15 +1,7 @@
 # Fashion Intel
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is the documentation for our solution to Flipkart Grid 2.0 
 
-## Commands
+This documentation contains the explanation of the components used and demos
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-* Hello
-* Push 2
-* Check docs
+The trained model weights are hosted on GCP. Run the download_models.sh to use them

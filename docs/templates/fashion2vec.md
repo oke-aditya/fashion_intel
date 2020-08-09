@@ -6,6 +6,10 @@
 Fashion2Vec is essentially a CNN (in our case ResNet) which is trained using supervised contrastive learning method
 this allows the CNN to generate very accurate feature representations of the fashion Images
 
+
+<img src="images/fashion2vec1.png" alt="Fashion2Vec">
+
+
 ## Dataset
 
 We used DeepFashion Attribute prediction dataset. This dataset had about 280,000 images belonging to 5000 classes, each class had its own unique fashion style
