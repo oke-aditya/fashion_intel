@@ -29,7 +29,7 @@ This algorithm is somewhat similar to Spectral clustering, instead we use an alg
 Unlike clustering where all the images in a cluster will get similar score, in this approach each image is given a score by comparing it
 with everyother image.
 
-## Supervised Learning Algorithm
+## Supervised Ranking Algorithm
 
 The data from e-commerce sites are a good indicator of what sells, moreover the data is labelled.
 
