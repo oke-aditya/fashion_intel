@@ -1,5 +1,6 @@
 // Paste this script inside console and see the magic :)
 // From pinterest to insta, insta to magazines this script kills them all unless it's not CORS!
+// If CORS policy is missing, shoot the payload!
 
 var images = document.getElementsByTagName('img');
 var i=0
